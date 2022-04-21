@@ -1,0 +1,9 @@
+RUN	simulations.Main_Simulation	main-simulation	1650532438507	 	3.3.1
+USER	Solirius Simulation	1	START	1650532439362	1650532439362
+REQUEST	1	solirius_010_HomePage	solirius_010_HomePage	1650532439393	1650532439860	OK	 
+GROUP	1	solirius_010_HomePage	1650532439367	1650532440281	717	OK
+REQUEST	1	solirius_120_Contact	solirius_120_Contact	1650532445896	1650532446397	OK	 
+GROUP	1	solirius_120_Contact	1650532445873	1650532446473	502	OK
+REQUEST	1	solirius_130_Contact_Submit	solirius_130_Contact_Submit	1650532446479	1650532447160	KO	substring(Thank you for contacting Solirius Consulting).find.exists, found nothing
+GROUP	1	solirius_130_Contact_Submit	1650532446473	1650532447208	681	KO
+USER	Solirius Simulation	1	END	1650532439362	1650532447222

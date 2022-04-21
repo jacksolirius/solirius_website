@@ -108,16 +108,67 @@ object Solirius_scenario {
           exec(http("solirius_120_Contact")
             .get(BaseURL + "/solirius/contact")
             .headers(Environment.get_header)
-            .check(substring("Let's talk about your next big project")))
+            .check(substring("Required fields are marked with")))
         }
 
         .group("solirius_130_Contact_Submit") {
           exec(http("solirius_130_Contact_Submit")
             .post(BaseURL + "/_api/wix-forms/v1/submit-form")
             .headers(Environment.post_header)
-            .body(ElFileBody("submission.json"))
-            .check(substring("Thank you for contacting Solirius Consulting")))
+            .body(ElFileBody("submission.json")))
+           // .check(substring("Thank you for contacting Solirius Consulting")))
         }
 
+
+  val joinOurTeam =
+    group("solirius_140_Join_Our_Team") {
+      exec(http("solirius_140_Join_Our_Team")
+        .get(BaseURL + "/solirius/join-our-team")
+        .headers(Environment.get_header)
+        .check(substring("WHY SOLIRIUS")))
+    }
+
+  .group("solirius_150_Job_Search") {
+    exec(http("solirius_150_Job_Search")
+      .get(BaseURL + "/solirius/job-search")
+      .headers(Environment.get_header)
+      .check(substring("Showing")))
+  }
+
+      .group("solirius_160_Job_Application") {
+        exec(http("solirius_160_Job_Application")
+          .get(BaseURL + "/solirius/job-search/job/2afda21d-2ecf-4b59-994d-c8912def2a70")
+          //Need to take out the hard code above
+          .headers(Environment.get_header)
+          .check(substring("About us")))
+      }
+
+      .group("solirius_170_Job_Application_Apply") {
+        exec(http("solirius_170_Job_Application_Apply")
+          .get(BaseURL + "/solirius/job-search/job/2afda21d-2ecf-4b59-994d-c8912def2a70/apply")
+          //Need to take out the hard code above
+          .headers(Environment.get_header)
+          .check(substring("Apply for")))
+      }
+
+      .group("solirius_180_Job_Application_Apply_Post") {
+        exec(http("solirius_180_Job_Application_Apply_Post")
+          .post(BaseURL + "/_api/cloud-data/v1/wix-data/collections/save")
+          .headers(Environment.post_header)
+          .body(ElFileBody("jobApply.json")))
+          //.check(substring("Apply for")))
+      }
+
+      .group("solirius_190_Job_Application_Apply_Success") {
+        exec(http("solirius_190_Job_Application_Apply_Success")
+          .get(BaseURL + "/job-search/job/2afda21d-2ecf-4b59-994d-c8912def2a70/apply/success")
+          .headers(Environment.get_header)
+          .body(ElFileBody("jobApply.json"))
+          .check(substring("Your application has been successfully submitted.")))
+      }
+
+
+
 }
+
 

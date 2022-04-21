@@ -1,0 +1,10 @@
+{
+  "simulation": "simulations.Main_Simulation",
+  "simulationId": "main-simulation",
+  "start": 1650532340274,
+  "description": "",
+  "scenarios": ["Solirius Simulation"],
+  "assertions": [
+
+  ]
+}

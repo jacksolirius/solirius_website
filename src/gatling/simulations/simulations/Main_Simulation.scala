@@ -28,6 +28,7 @@ class Main_Simulation extends Simulation {
         .exec(Solirius_scenario.services)
         .exec(Solirius_scenario.insights)
         .exec(Solirius_scenario.contactUs)
+        .exec(Solirius_scenario.joinOurTeam)
     }
 
 
