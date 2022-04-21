@@ -1,0 +1,399 @@
+{
+  "type": "GROUP",
+"name": "Global Information",
+"path": "",
+"pathFormatted": "group_missing-name-b06d1",
+"stats": {
+    "name": "Global Information",
+    "numberOfRequests": {
+        "total": 3,
+        "ok": 2,
+        "ko": 1
+    },
+    "minResponseTime": {
+        "total": 26,
+        "ok": 26,
+        "ko": 130
+    },
+    "maxResponseTime": {
+        "total": 130,
+        "ok": 87,
+        "ko": 130
+    },
+    "meanResponseTime": {
+        "total": 81,
+        "ok": 57,
+        "ko": 130
+    },
+    "standardDeviation": {
+        "total": 43,
+        "ok": 31,
+        "ko": 0
+    },
+    "percentiles1": {
+        "total": 87,
+        "ok": 57,
+        "ko": 130
+    },
+    "percentiles2": {
+        "total": 109,
+        "ok": 72,
+        "ko": 130
+    },
+    "percentiles3": {
+        "total": 126,
+        "ok": 84,
+        "ko": 130
+    },
+    "percentiles4": {
+        "total": 129,
+        "ok": 86,
+        "ko": 130
+    },
+    "group1": {
+    "name": "t < 800 ms",
+    "count": 2,
+    "percentage": 67
+},
+    "group2": {
+    "name": "800 ms < t < 1200 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group3": {
+    "name": "t > 1200 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group4": {
+    "name": "failed",
+    "count": 1,
+    "percentage": 33
+},
+    "meanNumberOfRequestsPerSecond": {
+        "total": 3.0,
+        "ok": 2.0,
+        "ko": 1.0
+    }
+},
+"contents": {
+"group_solirius-010-ho-bcdde": {
+          "type": "GROUP",
+"name": "solirius_010_HomePage",
+"path": "solirius_010_HomePage",
+"pathFormatted": "group_solirius-010-ho-bcdde",
+"stats": {
+    "name": "solirius_010_HomePage",
+    "numberOfRequests": {
+        "total": 1,
+        "ok": 0,
+        "ko": 1
+    },
+    "minResponseTime": {
+        "total": 243,
+        "ok": 0,
+        "ko": 243
+    },
+    "maxResponseTime": {
+        "total": 243,
+        "ok": 0,
+        "ko": 243
+    },
+    "meanResponseTime": {
+        "total": 243,
+        "ok": 0,
+        "ko": 243
+    },
+    "standardDeviation": {
+        "total": 0,
+        "ok": 0,
+        "ko": 0
+    },
+    "percentiles1": {
+        "total": 243,
+        "ok": 0,
+        "ko": 243
+    },
+    "percentiles2": {
+        "total": 243,
+        "ok": 0,
+        "ko": 243
+    },
+    "percentiles3": {
+        "total": 243,
+        "ok": 0,
+        "ko": 243
+    },
+    "percentiles4": {
+        "total": 243,
+        "ok": 0,
+        "ko": 243
+    },
+    "group1": {
+    "name": "t < 800 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group2": {
+    "name": "800 ms < t < 1200 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group3": {
+    "name": "t > 1200 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group4": {
+    "name": "failed",
+    "count": 1,
+    "percentage": 100
+},
+    "meanNumberOfRequestsPerSecond": {
+        "total": 1.0,
+        "ok": 0,
+        "ko": 1.0
+    }
+},
+"contents": {
+"req_solirius-010-ho-bcdde": {
+        "type": "REQUEST",
+        "name": "solirius_010_HomePage",
+"path": "solirius_010_HomePage / solirius_010_HomePage",
+"pathFormatted": "req_solirius-010-ho-24b02",
+"stats": {
+    "name": "solirius_010_HomePage",
+    "numberOfRequests": {
+        "total": 1,
+        "ok": 1,
+        "ko": 0
+    },
+    "minResponseTime": {
+        "total": 87,
+        "ok": 87,
+        "ko": 0
+    },
+    "maxResponseTime": {
+        "total": 87,
+        "ok": 87,
+        "ko": 0
+    },
+    "meanResponseTime": {
+        "total": 87,
+        "ok": 87,
+        "ko": 0
+    },
+    "standardDeviation": {
+        "total": 0,
+        "ok": 0,
+        "ko": 0
+    },
+    "percentiles1": {
+        "total": 87,
+        "ok": 87,
+        "ko": 0
+    },
+    "percentiles2": {
+        "total": 87,
+        "ok": 87,
+        "ko": 0
+    },
+    "percentiles3": {
+        "total": 87,
+        "ok": 87,
+        "ko": 0
+    },
+    "percentiles4": {
+        "total": 87,
+        "ok": 87,
+        "ko": 0
+    },
+    "group1": {
+    "name": "t < 800 ms",
+    "count": 1,
+    "percentage": 100
+},
+    "group2": {
+    "name": "800 ms < t < 1200 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group3": {
+    "name": "t > 1200 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group4": {
+    "name": "failed",
+    "count": 0,
+    "percentage": 0
+},
+    "meanNumberOfRequestsPerSecond": {
+        "total": 1.0,
+        "ok": 1.0,
+        "ko": 0
+    }
+}
+    },"req_solirius-010-ho-0c42e": {
+        "type": "REQUEST",
+        "name": "solirius_010_HomePage Redirect 1",
+"path": "solirius_010_HomePage / solirius_010_HomePage Redirect 1",
+"pathFormatted": "req_solirius-010-ho-8d6bb",
+"stats": {
+    "name": "solirius_010_HomePage Redirect 1",
+    "numberOfRequests": {
+        "total": 1,
+        "ok": 1,
+        "ko": 0
+    },
+    "minResponseTime": {
+        "total": 26,
+        "ok": 26,
+        "ko": 0
+    },
+    "maxResponseTime": {
+        "total": 26,
+        "ok": 26,
+        "ko": 0
+    },
+    "meanResponseTime": {
+        "total": 26,
+        "ok": 26,
+        "ko": 0
+    },
+    "standardDeviation": {
+        "total": 0,
+        "ok": 0,
+        "ko": 0
+    },
+    "percentiles1": {
+        "total": 26,
+        "ok": 26,
+        "ko": 0
+    },
+    "percentiles2": {
+        "total": 26,
+        "ok": 26,
+        "ko": 0
+    },
+    "percentiles3": {
+        "total": 26,
+        "ok": 26,
+        "ko": 0
+    },
+    "percentiles4": {
+        "total": 26,
+        "ok": 26,
+        "ko": 0
+    },
+    "group1": {
+    "name": "t < 800 ms",
+    "count": 1,
+    "percentage": 100
+},
+    "group2": {
+    "name": "800 ms < t < 1200 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group3": {
+    "name": "t > 1200 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group4": {
+    "name": "failed",
+    "count": 0,
+    "percentage": 0
+},
+    "meanNumberOfRequestsPerSecond": {
+        "total": 1.0,
+        "ok": 1.0,
+        "ko": 0
+    }
+}
+    },"req_solirius-010-ho-9dd42": {
+        "type": "REQUEST",
+        "name": "solirius_010_HomePage Redirect 2",
+"path": "solirius_010_HomePage / solirius_010_HomePage Redirect 2",
+"pathFormatted": "req_solirius-010-ho-f203f",
+"stats": {
+    "name": "solirius_010_HomePage Redirect 2",
+    "numberOfRequests": {
+        "total": 1,
+        "ok": 0,
+        "ko": 1
+    },
+    "minResponseTime": {
+        "total": 130,
+        "ok": 0,
+        "ko": 130
+    },
+    "maxResponseTime": {
+        "total": 130,
+        "ok": 0,
+        "ko": 130
+    },
+    "meanResponseTime": {
+        "total": 130,
+        "ok": 0,
+        "ko": 130
+    },
+    "standardDeviation": {
+        "total": 0,
+        "ok": 0,
+        "ko": 0
+    },
+    "percentiles1": {
+        "total": 130,
+        "ok": 0,
+        "ko": 130
+    },
+    "percentiles2": {
+        "total": 130,
+        "ok": 0,
+        "ko": 130
+    },
+    "percentiles3": {
+        "total": 130,
+        "ok": 0,
+        "ko": 130
+    },
+    "percentiles4": {
+        "total": 130,
+        "ok": 0,
+        "ko": 130
+    },
+    "group1": {
+    "name": "t < 800 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group2": {
+    "name": "800 ms < t < 1200 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group3": {
+    "name": "t > 1200 ms",
+    "count": 0,
+    "percentage": 0
+},
+    "group4": {
+    "name": "failed",
+    "count": 1,
+    "percentage": 100
+},
+    "meanNumberOfRequestsPerSecond": {
+        "total": 1.0,
+        "ok": 0,
+        "ko": 1.0
+    }
+}
+    }
+}
+
+     }
+}
+
+}

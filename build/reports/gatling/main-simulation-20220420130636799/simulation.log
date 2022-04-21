@@ -1,0 +1,5 @@
+RUN	simulations.Main_Simulation	main-simulation	1650459996799	 	3.3.1
+USER	Solirius Simulation	1	START	1650459997786	1650459997786
+REQUEST	1	solirius_010_HomePage	solirius_010_HomePage	1650459997813	1650459997902	KO	substring(Home).find.exists, found nothing
+GROUP	1	solirius_010_HomePage	1650459997793	1650459997942	89	KO
+USER	Solirius Simulation	1	END	1650459997786	1650459997948

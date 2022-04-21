@@ -1,0 +1,53 @@
+{
+  "formProperties": {
+    "formName": "Contact",
+    "formId": "comp-kziniu0v"
+  },
+  "emailConfig": {
+    "sendToOwnerAndEmails": {
+      "emailIds": []
+    }
+  },
+  "viewMode": "Site",
+  "fields": [
+    {
+      "fieldId": "comp-kziniu3g",
+      "label": "First name",
+      "additional": {
+        "value": {
+          "string": "Test"
+        }
+      }
+    },
+    {
+      "fieldId": "comp-kziniu43",
+      "label": "Last name",
+      "additional": {
+        "value": {
+          "string": "One"
+        }
+      }
+    },
+    {
+      "fieldId": "comp-kziniu4d",
+      "label": "Email",
+      "additional": {
+        "value": {
+          "string": "test@gmail.com"
+        }
+      }
+    },
+    {
+      "fieldId": "comp-kziniu4t",
+      "label": "Message",
+      "additional": {
+        "value": {
+          "string": "yay"
+        }
+      }
+    }
+  ],
+  "labelKeys": [
+    "custom.contact"
+  ]
+}
