@@ -33,7 +33,7 @@ class Main_Simulation extends Simulation {
 
 
   setUp(
-    Solirius.inject(rampUsers(1) during (5 minutes))
+    Solirius.inject(rampUsers(1) during (10 minutes))
       .protocols(httpProtocol))
 
 }

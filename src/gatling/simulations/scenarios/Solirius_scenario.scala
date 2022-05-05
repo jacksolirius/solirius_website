@@ -45,6 +45,7 @@ object Solirius_scenario {
         .headers(Environment.get_header)
         .check(substring("business consultants")))
     }
+      .pause(MinThinkTime seconds, MaxThinkTime seconds)
 
   .group("solirius_040_Cloud_Cyber") {
     exec(http("solirius_040_Cloud_Cyber")
@@ -52,20 +53,23 @@ object Solirius_scenario {
       .headers(Environment.get_header)
       .check(substring("adopt cloud solutions")))
   }
+      .pause(MinThinkTime seconds, MaxThinkTime seconds)
 
       .group("solirius_050_Data_AI") {
         exec(http("solirius_050_Data_AI")
-          .get(BaseURL + "/solirius/data-ai")
+          .get(BaseURL + "/solirius/data-and-ai")
           .headers(Environment.get_header))
          // .check(substring("adopt cloud solutions")))
       }
+      .pause(MinThinkTime seconds, MaxThinkTime seconds)
 
       .group("solirius_060_Digital_Delivery") {
         exec(http("solirius_060_Digital_Delivery")
           .get(BaseURL + "/solirius/digital-delivery")
           .headers(Environment.get_header)
-         .check(substring("From start to finish")))
+         .check(substring("we know that the journey to delivering new")))
       }
+      .pause(MinThinkTime seconds, MaxThinkTime seconds)
 
       .group("solirius_070_Digital_Engineering") {
         exec(http("solirius_070_Digital_Engineering")
@@ -73,6 +77,7 @@ object Solirius_scenario {
           .headers(Environment.get_header)
          .check(substring("technologies to build both")))
       }
+      .pause(MinThinkTime seconds, MaxThinkTime seconds)
 
       .group("solirius_080_User_Centered_Design") {
         exec(http("solirius_080_User_Centered_Design")
@@ -80,14 +85,16 @@ object Solirius_scenario {
           .headers(Environment.get_header)
           .check(substring("design with data and the latest")))
       }
+      .pause(MinThinkTime seconds, MaxThinkTime seconds)
 
     val insights =
       group("solirius_090_Insights") {
         exec(http("solirius_090_Insights")
           .get(BaseURL + "/solirius/insights")
           .headers(Environment.get_header)
-          .check(substring("Filter Stories")))
+          .check(substring("All posts")))
       }
+        .pause(MinThinkTime seconds, MaxThinkTime seconds)
 
       .group("solirius_100_Blog_1_Rebecca") {
         exec(http("solirius_100_Blog_1_Rebecca")
@@ -95,6 +102,7 @@ object Solirius_scenario {
           .headers(Environment.get_header)
           .check(substring("Rebecca from our Business Consulting")))
       }
+        .pause(MinThinkTime seconds, MaxThinkTime seconds)
 
         .group("solirius_110_Blog_2_Max") {
           exec(http("solirius_110_Blog_2_Max")
@@ -102,6 +110,7 @@ object Solirius_scenario {
             .headers(Environment.get_header)
             .check(substring("When thinking of uploading files")))
         }
+        .pause(MinThinkTime seconds, MaxThinkTime seconds)
 
       val contactUs =
         group("solirius_120_Contact") {
@@ -110,7 +119,8 @@ object Solirius_scenario {
             .headers(Environment.get_header)
             .check(substring("Required fields are marked with")))
         }
-
+          .pause(MinThinkTime seconds, MaxThinkTime seconds)
+/*
         .group("solirius_130_Contact_Submit") {
           exec(http("solirius_130_Contact_Submit")
             .post(BaseURL + "/_api/wix-forms/v1/submit-form")
@@ -118,6 +128,9 @@ object Solirius_scenario {
             .body(ElFileBody("submission.json")))
            // .check(substring("Thank you for contacting Solirius Consulting")))
         }
+            .pause(MinThinkTime seconds, MaxThinkTime seconds)
+
+ */
 
 
   val joinOurTeam =
@@ -127,6 +140,7 @@ object Solirius_scenario {
         .headers(Environment.get_header)
         .check(substring("WHY SOLIRIUS")))
     }
+      .pause(MinThinkTime seconds, MaxThinkTime seconds)
 
   .group("solirius_150_Job_Search") {
     exec(http("solirius_150_Job_Search")
@@ -135,6 +149,8 @@ object Solirius_scenario {
       .check(substring("Showing")))
   }
 
+      .pause(MinThinkTime seconds, MaxThinkTime seconds)
+
       .group("solirius_160_Job_Application") {
         exec(http("solirius_160_Job_Application")
           .get(BaseURL + "/solirius/job-search/job/2afda21d-2ecf-4b59-994d-c8912def2a70")
@@ -142,6 +158,7 @@ object Solirius_scenario {
           .headers(Environment.get_header)
           .check(substring("About us")))
       }
+      .pause(MinThinkTime seconds, MaxThinkTime seconds)
 
       .group("solirius_170_Job_Application_Apply") {
         exec(http("solirius_170_Job_Application_Apply")
@@ -150,7 +167,9 @@ object Solirius_scenario {
           .headers(Environment.get_header)
           .check(substring("Apply for")))
       }
+      .pause(MinThinkTime seconds, MaxThinkTime seconds)
 
+      /*
       .group("solirius_180_Job_Application_Apply_Post") {
         exec(http("solirius_180_Job_Application_Apply_Post")
           .post(BaseURL + "/_api/cloud-data/v1/wix-data/collections/save")
@@ -158,17 +177,44 @@ object Solirius_scenario {
           .body(ElFileBody("jobApply.json")))
           //.check(substring("Apply for")))
       }
+      .pause(MinThinkTime seconds, MaxThinkTime seconds)
+
+      .group("solirius_185_Job_Application_Apply_Report") {
+        exec(http("solirius_185_Job_Application_Apply_Report")
+          .post(BaseURL + "/_api/action-triggers-server/v1/report-event")
+          .headers(Environment.post_header)
+          .body(ElFileBody("jobReport.json")))
+        //.check(substring("Apply for")))
+      }
+      .pause(MinThinkTime seconds, MaxThinkTime seconds)
 
       .group("solirius_190_Job_Application_Apply_Success") {
         exec(http("solirius_190_Job_Application_Apply_Success")
           .get(BaseURL + "/job-search/job/2afda21d-2ecf-4b59-994d-c8912def2a70/apply/success")
           .headers(Environment.get_header)
-          .body(ElFileBody("jobApply.json"))
-          .check(substring("Your application has been successfully submitted.")))
+          .body(ElFileBody("jobApply.json")))
+          //.check(substring("Your application has been successfully submitted.")))
       }
+      .pause(MinThinkTime seconds, MaxThinkTime seconds)
+
+       */
 
 
+    .group("solirius_200_Cookie_Policy") {
+      exec(http("solirius_200_Cookie_Policy")
+        .get(BaseURL + "/solirius/cookie-policy")
+        .headers(Environment.get_header)
+        .check(substring("What is a cookie")))
+    }
+    .pause(MinThinkTime seconds, MaxThinkTime seconds)
 
+      .group("solirius_210_Privacy_Policy") {
+        exec(http("solirius_210_Privacy_Policy")
+          .get(BaseURL + "/solirius/privacy-policy")
+          .headers(Environment.get_header)
+          .check(substring("This section will form a basic overview of how Solirius")))
+
+    }
 }
 
 
